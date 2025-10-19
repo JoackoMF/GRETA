@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriVida - Planes Alimenticios Personalizados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">NutriVida</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Transforma tu vida con alimentación consciente</h1>
+            <p class="hero-subtitle">Planes nutricionales diseñados especialmente para ti</p>
+            <button class="cta-button" onclick="scrollToContact()">Obtén tu Plan Personalizado</button>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card card-1">
+                <span class="emoji">🥑</span>
+                <p>Ingredientes frescos</p>
+            </div>
+            <div class="floating-card card-2">
+                <span class="emoji">💪</span>
+                <p>Resultados reales</p>
+            </div>
+            <div class="floating-card card-3">
+                <span class="emoji">❤️</span>
+                <p>Salud integral</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes Section -->
+    <section id="planes" class="planes-section">
+        <h2 class="section-title">Nuestros Planes Alimenticios</h2>
+        <p class="section-subtitle">Elige el plan que mejor se adapte a tu estilo de vida</p>
+        
+        <div class="planes-grid">
+            <!-- Plan Básico -->
+            <div class="plan-card">
+                <div class="plan-header plan-basico">
+                    <h3>Plan Básico</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="period">/mes</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ Menú semanal balanceado</li>
+                    <li>✓ Lista de compras incluida</li>
+                    <li>✓ Recetas fáciles de preparar</li>
+                    <li>✓ Guía nutricional básica</li>
+                    <li>✓ Soporte por email</li>
+                </ul>
+                <button class="plan-button" onclick="selectPlan('Básico')">Seleccionar Plan</button>
+            </div>
+
+            <!-- Plan Premium -->
+            <div class="plan-card plan-popular">
+                <div class="popular-badge">Más Popular</div>
+                <div class="plan-header plan-premium">
+                    <h3>Plan Premium</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">59</span>
+                        <span class="period">/mes</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ Todo lo del Plan Básico</li>
+                    <li>✓ Menú personalizado mensual</li>
+                    <li>✓ Seguimiento nutricional semanal</li>
+                    <li>✓ Recetas gourmet saludables</li>
+                    <li>✓ App móvil exclusiva</li>
+                    <li>✓ Consulta mensual con nutricionista</li>
+                </ul>
+                <button class="plan-button" onclick="selectPlan('Premium')">Seleccionar Plan</button>
+            </div>
+
+            <!-- Plan Elite -->
+            <div class="plan-card">
+                <div class="plan-header plan-elite">
+                    <h3>Plan Elite</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">99</span>
+                        <span class="period">/mes</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ Todo lo del Plan Premium</li>
+                    <li>✓ Nutricionista personal dedicado</li>
+                    <li>✓ Ajustes ilimitados al menú</li>
+                    <li>✓ Análisis de composición corporal</li>
+                    <li>✓ Plan de suplementación</li>
+                    <li>✓ Videollamadas semanales</li>
+                    <li>✓ Acceso prioritario 24/7</li>
+                </ul>
+                <button class="plan-button" onclick="selectPlan('Elite')">Seleccionar Plan</button>
+            </div>
+        </div>
+
+        <!-- Plan Personalizado -->
+        <div class="custom-plan">
+            <div class="custom-plan-content">
+                <div class="custom-plan-text">
+                    <h3>¿Necesitas algo más específico?</h3>
+                    <p>Creamos un plan 100% personalizado basado en tus objetivos, gustos, restricciones y estilo de vida. Cada plan es único, como tú.</p>
+                    <ul class="custom-features">
+                        <li>🎯 Análisis completo de tus necesidades</li>
+                        <li>🍽️ Menús adaptados a tus preferencias</li>
+                        <li>📊 Seguimiento detallado de progreso</li>
+                        <li>💬 Comunicación directa con especialistas</li>
+                    </ul>
+                </div>
+                <div class="custom-plan-cta">
+                    <button class="custom-button" onclick="scrollToContact()">Solicitar Plan Personalizado</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="beneficios-section">
+        <h2 class="section-title">¿Por qué elegir NutriVida?</h2>
+        <div class="beneficios-grid">
+            <div class="beneficio-card">
+                <div class="beneficio-icon">🎓</div>
+                <h3>Profesionales Certificados</h3>
+                <p>Todos nuestros planes son diseñados por nutricionistas certificados con años de experiencia</p>
+            </div>
+            <div class="beneficio-card">
+                <div class="beneficio-icon">🔬</div>
+                <h3>Basado en Ciencia</h3>
+                <p>Utilizamos las últimas investigaciones en nutrición para garantizar resultados efectivos</p>
+            </div>
+            <div class="beneficio-card">
+                <div class="beneficio-icon">📱</div>
+                <h3>Fácil de Seguir</h3>
+                <p>Accede a tu plan desde cualquier dispositivo, con recetas simples y deliciosas</p>
+            </div>
+            <div class="beneficio-card">
+                <div class="beneficio-icon">🌟</div>
+                <h3>Resultados Comprobados</h3>
+                <p>Miles de personas han transformado su salud y bienestar con nuestros planes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto-section">
+        <h2 class="section-title">Comienza tu transformación hoy</h2>
+        <p class="section-subtitle">Completa el formulario y nos pondremos en contacto contigo</p>
+        
+        <form class="contact-form" id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan">Plan de interés</label>
+                    <select id="plan" name="plan" required>
+                        <option value="">Selecciona un plan</option>
+                        <option value="basico">Plan Básico</option>
+                        <option value="premium">Plan Premium</option>
+                        <option value="elite">Plan Elite</option>
+                        <option value="personalizado">Plan Personalizado</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensaje">Cuéntanos sobre tus objetivos</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-button">Enviar Solicitud</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <span class="logo-icon">🥗</span>
+                    <span class="logo-text">NutriVida</span>
+                </div>
+                <p>Transformando vidas a través de la nutrición consciente</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>📧 info@nutrivida.com</p>
+                <p>📱 +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NutriVida. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
